@@ -3,6 +3,8 @@ import Link from "next/link";
 import Menu from "../__Components/Menu";
 import Navebar from "../__Components/Navebar";
 
+
+
 export default function DashboardLayout({ children }) {
   return <div className="h-screen flex"> 
   {/**LEFT */}
