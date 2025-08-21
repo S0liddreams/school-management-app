@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Menu from "../__Components/Menu";
+import Navebar from "../__Components/Navebar";
 
 export default function DashboardLayout({ children }) {
   return <div className="h-screen flex"> 
@@ -16,8 +17,9 @@ export default function DashboardLayout({ children }) {
 
 
   {/**RIGHT */}
-  <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] ">
-    R
+  <div className="w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#065d8c] overflow-scroll ">
+    <Navebar/>
+    {children}
   </div>
 
     
