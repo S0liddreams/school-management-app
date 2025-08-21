@@ -6,10 +6,17 @@ module.exports = {
     "./pages/**/*.{js,jsx,ts,tsx}",
     "./components/**/*.{js,jsx,ts,tsx}",
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/@shadcn/ui/**/*.{js,jsx,ts,tsx}", // add shadcn path if needed
+   // add shadcn path if needed
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        primfirst:"#065d8c",
+        second:"#99d5f5",
+        tatiary1:"#E5B80B",
+        tatiary2:"#d62828"
+      }
+    },
   },
   plugins: [],
 };

@@ -6,7 +6,7 @@ const Navebar = () => {
     <div className='flex items-center justify-between p-4'>
       {/**SEARCH BAR */}
       <div className='hidden md:flex items-center gap-2 text-xs rounded-full ring-[1.5px] bg-[#99d5f5]  ring-white px-2'>
-        <Image src="src" alt="alt" width={14} height={14} />
+        <Image src="/search.png" alt="alt" width={14} height={14} />
         <input className='w-[200px] p-2 outline-none' type="text" placeholder='Search...' />
       </div>
       {/**ICONS AND USER */}
