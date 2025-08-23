@@ -1,6 +1,11 @@
-import CountChart from "@/app/__Components/CountChart";
-import UserCard from "@/app/__Components/UserCard";
+
+
+
 import React from "react";
+import CountChart from "../../__Components/CountChart";
+import AttendanceChart from "../../__Components/AttendanceChart";
+import FinanceChart from "../../__Components/FinanceChart";
+import UserCard from "../../__Components/UserCard";
 
 const AdminPage = () => {
   return (
@@ -21,11 +26,17 @@ const AdminPage = () => {
           <CountChart/>
           </div>
           {/**ATTENDANCE CHARTS */}
-          <div className="w-full lg:w-2/3 h-[450px]"></div>
+          <div className="w-full lg:w-2/3 h-[450px]">
+          <AttendanceChart/>
+          
+          </div>
         </div>
 
         {/**BOTTOM CHARTS */}
-        <div className=""></div>
+        <div className="w-full h-[500px]">
+
+          <FinanceChart/>
+        </div>
       </div>
       {/**RIGHT */}
       <div className="w-fit lg:w-1/3">R</div>
