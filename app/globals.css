@@ -2,6 +2,22 @@
 @import "tw-animate-css";
 @tailwind utilities;
 
+.react-calendar{
+  width: 100% !important; 
+  border: none !important;
+  font-family: inter !important;
+}
+
+.react-calendar__tile--active {
+    background: #065d8c !important;
+    color: white !important;
+}
+
+.react-calendar__navigation__label__labelText {
+  font-weight: 600;
+
+}
+
 
 @custom-variant dark (&:is(.dark *));
 
