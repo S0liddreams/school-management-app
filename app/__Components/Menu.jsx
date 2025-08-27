@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { role }from "../../lib/data";
+
 
 const menuItems = [
   {
@@ -10,63 +12,87 @@ const menuItems = [
         icon: "/home.png",
         label: "Home",
         href: "/home",
+        visible: ["admin", "teacher", "student", "parent"],
       },
       {
         icon: "/education.png",
         label: "Teachers",
         href: "/teachers",
+        visible: ["admin", "teacher", "student", "parent"],
       },
       {
         icon: "/student.png",
         label: "Students",
-        href: "/student",
+        href: "/list/student",
+        visible: ["admin", "teacher"],
       },
-     
+
       {
         icon: "/parents.png",
         label: "Parents",
-        href: "/parents",
+        href: "/list/parents",
+        visible: ["admin", "teacher"],
+      },
+      {
+        icon: "/parents.png",
+        label: "Subjects",
+        href: "/list/subjects",
+        visible: ["admin"],
       },
       {
         icon: "/training.png",
         label: "Classes",
-        href: "/classes",
+        href: "/list/classes",
+        visible: ["admin", "teacher"],
       },
       {
         icon: "/notes.png",
         label: "Lesson",
         href: "/lesson",
+        visible: ["admin", "teacher"],
       },
       {
         icon: "/exams.png",
         label: "Exams",
-        href: "/exams",
+        href: "/list/exams",
+        visible: ["admin", "teacher", "student", "parent"],
       },
       {
         icon: "/delegate.png",
         label: "Assignments",
-        href: "/assisntments",
+        href: "/list/assignments",
+        visible: ["admin", "teacher", "student", "parent"],
+      },
+      {
+        icon: "/delegate.png",
+        label: "Results",
+        href: "/list/results",
+        visible: ["admin", "teacher", "student", "parent"],
       },
       {
         icon: "/selection.png",
         label: "Attendance",
-        href: "/attendance",
+        href: "/list/attendance",
+        visible: ["admin", "teacher", "student", "parent"],
       },
-    
+
       {
         icon: "/calendar.png",
         label: "Events",
-        href: "/events",
+        href: "/list/events",
+        visible: ["admin", "teacher", "student", "parent"],
       },
       {
         icon: "/email.png",
-        label: "Message",
-        href: "/message",
+        label: "Messages",
+        href: "/list/messages",
+        visible: ["admin", "teacher", "student", "parent"],
       },
       {
         icon: "/announcement.png",
         label: "Announcements",
-        href: "/announcements",
+        href: "/list/announcements",
+        visible: ["admin", "teacher", "student", "parent"],
       },
     ],
   },
@@ -79,16 +105,19 @@ const menuItems = [
         icon: "/profile.png",
         label: "Profile",
         href: "/profile",
+        visible: ["admin", "teacher", "student", "parent"],
       },
       {
         icon: "/setting.png",
         label: "Settings",
         href: "/settings",
+        visible: ["admin", "teacher", "student", "parent"],
       },
       {
         icon: "/logout.png",
         label: "Logout",
         href: "/logout",
+        visible: ["admin", "teacher", "student", "parent"],
       },
     ],
   },
@@ -99,13 +128,23 @@ const Menu = () => {
     <div className="mt-4 text-sm">
       {menuItems.map((i) => (
         <div className="flex flex-col gap-2" key={i.title}>
-          <span className="hidden lg:block text-gray-400 font-medium my-4">{i.title}</span>
-          {i.items.map((item) => (
-            <Link className="flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2" href={item.href} key={item.label}>
-              <Image src={item.icon} alt="alt" width={20} height={20} />
-              <span className="hidden lg:block">{item.label}</span>
-            </Link>
-          ))}
+          <span className="hidden lg:block text-gray-400 font-medium my-4">
+            {i.title}
+          </span>
+          {i.items.map((item) => {
+            if (item.visible.includes(role)) {
+              return (
+                <Link
+                  className="flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2"
+                  href={item.href}
+                  key={item.label}
+                >
+                  <Image src={item.icon} alt="alt" width={20} height={20} />
+                  <span className="hidden lg:block">{item.label}</span>
+                </Link>
+              );
+            }
+          })}
         </div>
       ))}
     </div>
