@@ -3,8 +3,8 @@ import CountChart from "../../__Components/CountChart";
 import AttendanceChart from "../../__Components/AttendanceChart";
 import FinanceChart from "../../__Components/FinanceChart";
 import UserCard from "../../__Components/UserCard";
-import EventCalendar from "../../__Components/EventCalendar"
-import Announcements from "../../__Components/Announcements"
+import EventCalendar from "../../__Components/EventCalendar";
+import Announcements from "../../__Components/Announcements";
 
 const AdminPage = () => {
   return (
@@ -37,9 +37,8 @@ const AdminPage = () => {
       </div>
       {/**RIGHT */}
       <div className="w-fit lg:w-1/3 flex flex-col gap-8">
-      <EventCalendar/>
-      <Announcements/>
-      
+        <EventCalendar />
+        <Announcements />
       </div>
     </div>
   );

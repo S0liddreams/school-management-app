@@ -135,7 +135,7 @@ const Menu = () => {
             if (item.visible.includes(role)) {
               return (
                 <Link
-                  className="flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2"
+                  className="flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2 rounded-md hover:bg-[#99d5f5]"
                   href={item.href}
                   key={item.label}
                 >
