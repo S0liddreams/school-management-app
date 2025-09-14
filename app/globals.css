@@ -17,6 +17,106 @@
   font-weight: 600;
 
 }
+.rbc-btn-group:first-child{
+  display: none !important;
+}
+
+.rbc-toolbar-label{
+  text-align: right !important;
+  padding: 0px 20px !important;
+}
+
+.rbc-btn-group:last-child{
+  font-size: 13px !important;
+}
+.rbc-btn-group:last-child button{
+  border: none !important;
+  background-color:white !important;
+  margin-left: 4px !important;
+}
+
+.rbc-toolbar button.rbc-active{
+  background-color: #dbdafe !important;
+  box-shadow: none !important;
+
+}
+
+.rbc-time-view{
+  border-color: #eee;
+}
+
+.rbc-time-header{
+  display: none !important;
+}
+
+.rbc-time-content{
+  border: none !important;
+}
+
+.rbc-time-gutter.rbc-time-column{
+  font-size: 12px  !important;
+}
+
+.rbc-time-gutter.rbc-time-column .rbc-timeslot-group{
+  padding: 0px 20px  !important;
+}
+
+.rbc-timeslot-group{
+  background-color:burlywood;
+}
+
+.rbc-day-slot{
+  font-size: 14px !important;
+}
+
+.rbc-event{
+
+  border: none !important;
+  color: black !important;
+  padding: 10px !important;
+  margin: 10px !important;
+  width: 99% !important;
+}
+
+.rbc-event:nth-child(1){
+  background-color: #e2f8ff ;
+}
+.rbc-event:nth-child(2){
+  background-color: #a278ff ;
+}
+.rbc-event:nth-child(3){
+  background-color: #c2284f ;
+}
+.rbc-event:nth-child(4){
+  background-color: #e208ff ;
+}
+.rbc-event:nth-child(5){
+  background-color: #e2c8ff ;
+}
+.rbc-event:nth-child(6){
+  background-color: #a3a8ff ;
+}
+.rbc-event:nth-child(7){
+  background-color: #d2c2ff ;
+}
+.rbc-event:nth-child(8){
+  background-color: #b2f3ff ;
+}
+
+.rbc-event-label{
+  color: gray !important;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 @custom-variant dark (&:is(.dark *));
