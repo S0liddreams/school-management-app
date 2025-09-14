@@ -17,7 +17,7 @@ const menuItems = [
       {
         icon: "/education.png",
         label: "Teachers",
-        href: "/teachers",
+        href: "/list/teachers",
         visible: ["admin", "teacher", "student", "parent"],
       },
       {
@@ -48,7 +48,7 @@ const menuItems = [
       {
         icon: "/notes.png",
         label: "Lesson",
-        href: "/lesson",
+        href: "/list/lesson",
         visible: ["admin", "teacher"],
       },
       {
